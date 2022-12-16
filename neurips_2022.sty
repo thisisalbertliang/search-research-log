@@ -44,9 +44,9 @@
 \ProcessOptions\relax
 
 % determine whether this is an anonymized submission
-\newif\if@submission\@submissiontrue
-\if@neuripsfinal\@submissionfalse\fi
-\if@preprint\@submissionfalse\fi
+% \newif\if@submission\@submissiontrue
+% \if@neuripsfinal\@submissionfalse\fi
+% \if@preprint\@submissionfalse\fi
 
 % fonts
 \renewcommand{\rmdefault}{ptm}
@@ -271,12 +271,12 @@
     {\LARGE\bf \@title\par}
     \@bottomtitlebar
     \if@submission
-      \begin{tabular}[t]{c}\bf\rule{\z@}{24\p@}
-        Anonymous Author(s) \\
-        Affiliation \\
-        Address \\
-        \texttt{email} \\
-      \end{tabular}%
+      % \begin{tabular}[t]{c}\bf\rule{\z@}{24\p@}
+      %   Anonymous Author(s) \\
+      %   Affiliation \\
+      %   Address \\
+      %   \texttt{email} \\
+      % \end{tabular}%
     \else
       \def\And{%
         \end{tabular}\hfil\linebreak[0]\hfil%
@@ -335,10 +335,10 @@
       (NeurIPS \@neuripsyear).%, \@neuripslocation.%
     }
   \else
-    \newcommand{\@noticestring}{%
-      Submitted to \@neuripsordinal\/ Conference on Neural Information
-      Processing Systems (NeurIPS \@neuripsyear). Do not distribute.%
-    }
+    % \newcommand{\@noticestring}{%
+    %   Submitted to \@neuripsordinal\/ Conference on Neural Information
+    %   Processing Systems (NeurIPS \@neuripsyear). Do not distribute.%
+    % }
 
     % hide the acknowledgements
     \NewEnviron{hide}{}
@@ -346,8 +346,8 @@
     \let\endack\endhide
 
     % line numbers for submission
-    \RequirePackage{lineno}
-    \linenumbers
+    % \RequirePackage{lineno}
+    % \linenumbers
 
     % fix incompatibilities between lineno and amsmath, if required, by
     % transparently wrapping linenomath environments around amsmath
